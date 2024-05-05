@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+    </header>
+    <div class="main-container">
+        <section id="requestForm">
+            <h2>Request a Book</h2>
+            <form id="requestBookForm" onsubmit="handleFormSubmit(event)">
+                <input type="number" id="isbn" placeholder="Enter ISBN" required>
+                <input type="number" id="userId" placeholder="Enter User ID" required>
+                <button type="submit">Request Book</button>
+                <button class="process-btn" type="button" onclick="processRequests()">Process Requests</button>
+            </form>
+        </section>
+        <section id="output">
+            <h2>System Output</h2>
+            <pre id="outputLog"></pre>
+            
+        </section>
+    </div>
+    <script src="index.js" defer></script>
+</body>
+</html>
